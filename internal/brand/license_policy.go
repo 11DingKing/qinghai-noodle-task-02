@@ -86,9 +86,3 @@ func ValidateLicenseTransfer(license BrandLicense, currentOwner, proposedOwner s
 	}
 	return nil
 }
-
-func threeStoreReviewSnapshot(store StoreProfile) StoreProfile {
-	clone := store
-	clone.CultureDisplayEnabled = false
-	return clone
-}
