@@ -20,6 +20,8 @@ func NewService(registry *Registry, now func() time.Time) *Service {
 }
 
 func (s *Service) CheckThreeStoreModel(_ context.Context, store StoreProfile) error {
+	store = threeStoreReviewSnapshot(store)
+
 	return ValidateThreeStoreModel(store)
 }
 
